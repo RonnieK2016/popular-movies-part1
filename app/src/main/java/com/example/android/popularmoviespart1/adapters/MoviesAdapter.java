@@ -44,6 +44,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
             Picasso.with(mContext)
                     .load(Constants.MOVIE_DB_IMAGES_BASE_PATH + selectedMovie.getPosterPath())
+                    .placeholder(R.drawable.ic_posterplaceholder)
                     .into(movieViewHolder.moviePoster);
 
             movieViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
