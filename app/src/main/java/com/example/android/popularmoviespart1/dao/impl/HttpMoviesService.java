@@ -24,15 +24,12 @@ import java.util.Map;
 public class HttpMoviesService implements MoviesAccessService {
 
     private final static String TAG = MoviesAccessService.class.getSimpleName();
-    private static HttpMoviesService httpMoviesService;
-    private String movieApiKey;
     private Context mContext;
     private RequestQueue mRequestQueue;
 
     private HttpMoviesService(){ }
 
     public HttpMoviesService(Context context) {
-        this.movieApiKey = BuildConfig.MOVIE_DB_API_KEY;
         this.mContext = context;
     }
 
