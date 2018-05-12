@@ -78,6 +78,11 @@ public class MoviesListActivity extends AppCompatActivity implements HttpRespons
         mMoviesListRv.addOnScrollListener(onScrollListener);
         initAdapter();
         moviesAccessService = MoviesAccessFactory.getMoviesService(this);
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
         loadMovies(mSelectedSort, 1);
     }
 
